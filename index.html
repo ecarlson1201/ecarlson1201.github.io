@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minnesota Vikings Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+</head>
+
+<body>
+    <header role='banner' class='header'></header>
+
+    <div class="js-quiz hidden">
+        <form>
+            <h2 class="js-question question"></h2>
+            <label for="ans-a"></label>
+            <input type="radio" name="answers" id="ans-a">
+            <br>
+            <label for="ans-b"></label>
+            <input type="radio" name="answers" id="ans-b">
+            <br>
+            <label for="ans-c"></label>
+            <input type="radio" name="answers" id="ans-c">
+            <br>
+            <label for="ans-d"></label>
+            <input type="radio" name="answers" id="ans-d">
+            <br>
+            <button class="js-submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="js-quiz">
+        <h2 class="js-result"></h2>
+        <button class="js-next">Start Quiz</button>
+        <button class="js-restart hidden">Restart Quiz</button>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/store.js"></script>
+    <script src="./js/elements.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/clickHandlers.js"></script>
+</body>
+
+</html>
