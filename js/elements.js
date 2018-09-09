@@ -5,3 +5,6 @@ const NEXT = $('.js-next');
 const RESTART = $('.js-restart');
 const QUIZ = $('.js-quiz');
 const QUESTION = $('.js-question');
+const IMAGE = $('#image');
+const SOUNDER = $('#sounder');
+const VIDEO = $('.js-vidLink')

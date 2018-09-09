@@ -1,45 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Minnesota Vikings Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/float-grid.css" />
 </head>
 
 <body>
-    <header role='banner' class='header'></header>
+    <header role='banner' class='header col-6'></header>
+    <div class="row">
+        <section class="js-quiz hidden col-6" role="region">
+            <form>
+                <h2 class="js-question question"></h2>
+                <label for="ans-a"></label>
+                <input type="radio" name="answers" id="ans-a" required>
+                <br>
+                <label for="ans-b"></label>
+                <input type="radio" name="answers" id="ans-b" required>
+                <br>
+                <label for="ans-c"></label>
+                <input type="radio" name="answers" id="ans-c" required>
+                <br>
+                <label for="ans-d"></label>
+                <input type="radio" name="answers" id="ans-d" required>
+                <br>
+                <button class="js-submit" type="submit">Submit</button>
+                <audio id="sounder" autoplay></audio>
+            </form>
+        </section>
 
-    <div class="js-quiz hidden">
-        <form>
-            <h2 class="js-question question"></h2>
-            <label for="ans-a"></label>
-            <input type="radio" name="answers" id="ans-a">
+        <section class="js-quiz col-6" role="region">
+            <img src="./assets/images/Vikings-Paul-Allen.jpg" id="image" alt="paul allen">
+            <h2 class="js-result">"Hello football fans! I'm Paul Allen, the voice of the Minnesota Vikings and I'm here to text your knowledge
+                of Vikings' history! I can get pretty loud, so if you would like to unplug my mic, just click the mute button
+                in the corner! Let's go!"
+            </h2>
+            <button class="js-next">Start Quiz</button>
+            <button class="js-restart hidden">Restart Quiz</button>
             <br>
-            <label for="ans-b"></label>
-            <input type="radio" name="answers" id="ans-b">
-            <br>
-            <label for="ans-c"></label>
-            <input type="radio" name="answers" id="ans-c">
-            <br>
-            <label for="ans-d"></label>
-            <input type="radio" name="answers" id="ans-d">
-            <br>
-            <button class="js-submit" type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="js-quiz">
-        <h2 class="js-result"></h2>
-        <button class="js-next">Start Quiz</button>
-        <button class="js-restart hidden">Restart Quiz</button>
+            <a class="js-vidLink vidLink" target="_blank"></a>
+        </section>
+
+        <button id="mute"></button>
+
     </div>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/store.js"></script>
     <script src="./js/elements.js"></script>
-    <script src="./js/functions.js"></script>
+    <script src="./js/quizfunctions.js"></script>
     <script src="./js/clickHandlers.js"></script>
 </body>
 

@@ -1,8 +1,8 @@
 // removes 'js.checked' class from all inputs and adds it to the last clicked input
 (function () {
     INPUT.click(function (event) {
-        INPUT.removeClass('js-checked');
-        $(this).addClass('js-checked');
+        INPUT.removeClass('checked');
+        $(this).addClass('checked');
     });
 })();
 
@@ -11,14 +11,20 @@
     $('form').submit(function (event) {
         event.preventDefault();
         if (questionsList[counter.currentQuestion() - 1].answer === $('input:checked').val()) {
-            RESULT.text('correct');
+            RESULT.text('Correct!');
             counter.addCorrect();
+            IMAGE.attr('src', getRandomAsset(correctImg))
+            SOUNDER.attr('src', getRandomAsset(correctSounder))
+            getVidLink()
+
         }
         else {
-            RESULT.text('incorrect');
+            RESULT.text(`Incorrect. The answer is ${questionsList[counter.currentQuestion() - 1].answer}`);
+            IMAGE.attr('src', getRandomAsset(incorrectImg))
+            SOUNDER.attr('src', getRandomAsset(incorrectSounder))
         };
         QUIZ.toggleClass('hidden');
-        INPUT.removeClass('js-checked');
+        INPUT.removeClass('checked');
         INPUT.removeAttr('checked')
     });
 })();
@@ -30,6 +36,7 @@
         displayNavButtons();
         generateQuestion();
         QUIZ.toggleClass('hidden');
+        VIDEO.text('')
     });
 })();
 
@@ -37,6 +44,18 @@
 (function () {
     RESTART.click(function (event) {
         counter.reset();
+        counter.nextQuestion();
         displayNavButtons();
+        generateQuestion();
+        QUIZ.toggleClass('hidden');
+        VIDEO.text('')
+    });
+})();
+
+// mutes/unmutes all sounders
+(function () {
+    $('#mute').click(function () {
+        let bool = SOUNDER.prop("muted");
+        SOUNDER.prop("muted", !bool);
     });
 })();
