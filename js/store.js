@@ -1,26 +1,29 @@
 // counter that tracks current question and correct answer count, adds to question and correct answer count, and resets count
 const counter = (function () {
-    this.currentQuestion = 0;
-    this.currentCorrect = 0
+    let counterModule = {};
+    let currentQuestion = 0;
+    let currentCorrect = 0
 
-    this.nextQuestion = function () {
+    counterModule.nextQuestion = function () {
         return currentQuestion++
     };
 
-    this.addCorrect = function () {
+    counterModule.addCorrect = function () {
         return currentCorrect++
     };
 
-    this.currentQuestion = function () {
+    counterModule.currentQuestion = function () {
         return currentQuestion
     };
 
-    this.currentCorrect = function () {
+    counterModule.currentCorrect = function () {
         return currentCorrect
     };
 
-    this.reset = function () {
+    counterModule.reset = function () {
         currentQuestion = 0;
         currentCorrect = 0;
     };
+
+    return counterModule
 })();
