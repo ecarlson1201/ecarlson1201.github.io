@@ -7,4 +7,5 @@ const QUIZ = $('.js-quiz');
 const QUESTION = $('.js-question');
 const IMAGE = $('#image');
 const SOUNDER = $('#sounder');
-const VIDEO = $('.js-vidLink')
+const VIDEO = $('.js-vidLink');
+const LABEL = $('.js-option');

@@ -1,7 +1,7 @@
 // removes 'js.checked' class from all inputs and adds it to the last clicked input
 (function () {
-    INPUT.click(function (event) {
-        INPUT.removeClass('checked');
+    LABEL.click(function (event) {
+        LABEL.removeClass('checked');
         $(this).addClass('checked');
     });
 })();
@@ -13,19 +13,21 @@
         if (questionsList[counter.currentQuestion() - 1].answer === $('input:checked').val()) {
             RESULT.text('Correct!');
             counter.addCorrect();
-            IMAGE.attr('src', getRandomAsset(correctImg))
-            SOUNDER.attr('src', getRandomAsset(correctSounder))
+            IMAGE.attr('src', getRandomAsset(correctImg));
+            IMAGE.attr('alt', 'happy vikings fan');
+            SOUNDER.attr('src', getRandomAsset(correctSounder));
             getVidLink()
 
         }
         else {
             RESULT.text(`Incorrect. The answer is ${questionsList[counter.currentQuestion() - 1].answer}`);
-            IMAGE.attr('src', getRandomAsset(incorrectImg))
+            IMAGE.attr('alt', 'sad vikings fan')
+            IMAGE.attr('src', getRandomAsset(incorrectImg));
             SOUNDER.attr('src', getRandomAsset(incorrectSounder))
         };
         QUIZ.toggleClass('hidden');
-        INPUT.removeClass('checked');
-        INPUT.removeAttr('checked')
+        LABEL.removeClass('checked');
+        INPUT.removeAttr('checked');
     });
 })();
 
@@ -36,7 +38,8 @@
         displayNavButtons();
         generateQuestion();
         QUIZ.toggleClass('hidden');
-        VIDEO.text('')
+        VIDEO.text('');
+        VIDEO.addClass('hidden');
     });
 })();
 
@@ -48,14 +51,15 @@
         displayNavButtons();
         generateQuestion();
         QUIZ.toggleClass('hidden');
-        VIDEO.text('')
+        VIDEO.text('');
     });
 })();
 
 // mutes/unmutes all sounders
 (function () {
-    $('#mute').click(function () {
+    $('.muteButton').click(function () {
         let bool = SOUNDER.prop("muted");
         SOUNDER.prop("muted", !bool);
+        $(this).toggleClass('muted')
     });
 })();

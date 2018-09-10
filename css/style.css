@@ -1,55 +1,53 @@
-.hidden {
-    display: none;
-}
-
 body {
     background-image: url('../assets/images/minnesota-vikings-wallpapers-31229-5622710.jpg');
+    font-family: 'ubuntu';
 }
-
 
 header {
     text-align: right;
     font-size: 20px;
-    color: rgb(255, 217, 0);
-    font-family: 'ubuntu';
+    color: rgb(255, 221, 25);
     padding-bottom: 20px;
-}
-
-.js-quiz {
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    color: rgb(78, 42, 138);
-    padding: 5%;
-    font-family: 'ubuntu';
-    border: 5px solid black;
+    font-weight: bold;
+    text-shadow: 1px 2px black;
 }
 
 label{
-    font-size: 25px;
+    display: table-cell;
+    width: 400px;
+    font-size: 20px;
     height: 50px;
     background-color: rgb(241, 183, 45);
-    border: 10px;
     color: rgb(78, 42, 138);
     border-radius: 10px;
-    margin: 5px;
+    vertical-align: middle;
 }
 
-label:focus {
+label:focus{
+    color: rgb(241, 183, 45);
+    background-color: rgb(78, 42, 138);
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+input:focus + label {
     color: rgb(241, 183, 45);
     background-color: rgb(78, 42, 138);
 }
 
 button {
     background-color: rgb(78, 42, 138);
-    width: 66.67%;
+    width: 500px;
+    max-width: 66.67%;
     height: 50px;
-    font-size: 30px;
-    font-family: 'ubuntu';
+    font-size: 25px;
     color: rgb(241, 183, 45);
     border-radius: 10px;
     border: 0px;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -70,27 +68,26 @@ img{
     width: 60%;
 }
 
-input{
-    display: none;
+span{
+    color:rgb(223, 169, 45);
+    text-shadow: 1px 2px black;
 }
 
-#mute{
-    width: 50px;
-    background: transparent url("../assets/images/audio-150191_960_720.png") no-repeat top;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 50px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.js-quiz {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    color: rgb(78, 42, 138);
+    padding: 5%;
+    border: 5px solid black;
 }
 
 .vidLink {
     background-color: rgb(241, 183, 45);
-    font-family: 'ubuntu';
     font-size: 20px;
     text-decoration: none;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .vidLink:hover{
@@ -98,4 +95,39 @@ input{
     color:rgb(241, 183, 45);
     transition-duration: 0.4s;
     cursor: pointer;
+}
+
+.checked {
+    background-color: rgb(25, 9, 51);
+    color:rgb(241, 183, 45);
+}
+
+.checked:hover {
+    background-color: rgb(25, 9, 51);
+}
+
+.option {
+    display: inline-block;
+}
+
+.muteButton {
+    width: 50px;
+    background: transparent url("../assets/images/soundOn.png") no-repeat top;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+}
+
+.muted {
+    background: transparent url("../assets/images/soundOff.png") no-repeat top;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hidden {
+    display: none;
 }

@@ -47,7 +47,7 @@ const questionsList = [
 
     {
         question: '7. Which phrase am I famous for shouting during explosive runs by running back Adrian Peterson?',
-        options: ['A: \"Put it on the booaaarrdd...YES!!\"', 'B: \"AND HE\'S LOOSE!!\"', 'C: \"He could...go...all..the..way!!\"', 'D: \"Do you believe in miracles?!\"'],
+        options: ['A: \"Put it on the boaarrdd...YES!!\"', 'B: \"AND HE\'S LOOSE!!\"', 'C: \"He could...go...all..the..way!!\"', 'D: \"Do you believe in miracles?!\"'],
         answer: 'B: \"AND HE\'S LOOSE!!\"',
         link: 'https://www.youtube.com/watch?v=Rp8ZhbLNDdM'
     },
@@ -76,10 +76,6 @@ const questionsList = [
         link: 'https://www.youtube.com/watch?v=O7uS0ezb2o4'
     }
 ]
-
-const vidLinks = {
-    ending: 'https://www.youtube.com/watch?v=vmNMCBW9O88',
-}
 
 const correctImg = ['./assets/images/correct/correct1.jpg', './assets/images/correct/correct2.jpg', './assets/images/correct/correct3.jpg',
     './assets/images/correct/correct4.jpg', './assets/images/correct/correct5.jpg']
