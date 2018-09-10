@@ -8,7 +8,7 @@ const questionsList = [
     },
 
     {
-        question: '2. Before the "Minneapolis Miracle" in 2018, the Vikings beat what team in a similar '
+        question: '2. Before the "Minneapolis Miracle" in 2018, the Vikings beat what team in similar '
             + 'walkoff fashion in 2009?',
         options: ['A: San Francisco 49ers', 'B: Detroit Lions', 'C: Green Bay Packers', 'D: Chicago Bears',],
         answer: 'A: San Francisco 49ers',
@@ -53,7 +53,7 @@ const questionsList = [
     },
 
     {
-        question: '8. Which Hall of Fame quarterback threw a late game interception for the Vikings in the 2009 NCF '
+        question: '8. Which Hall of Fame quarterback threw a late game interception for the Vikings in the 2009 NFC '
             + 'Championship Game that prevented them from going to the Super Bowl?',
         options: ['A: JaMarcus Russell', 'B: Aaron Rodgers', 'C: Brett Favre', 'D: Fran Tarkenton',],
         answer: 'C: Brett Favre',

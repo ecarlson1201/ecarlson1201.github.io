@@ -1,6 +1,6 @@
 body {
     background-image: url('../assets/images/minnesota-vikings-wallpapers-31229-5622710.jpg');
-    font-family: 'ubuntu';
+    font-family: 'ubuntu','Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 header {
@@ -34,7 +34,8 @@ input {
 
 input:focus + label {
     color: rgb(241, 183, 45);
-    background-color: rgb(78, 42, 138);
+    background-color: rgb(25, 9, 51);
+    transition-duration: 0.3s;
 }
 
 button {
