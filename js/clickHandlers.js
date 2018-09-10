@@ -10,7 +10,7 @@
 (function () {
     $('form').submit(function (event) {
         event.preventDefault();
-        if (questionsList[counter.currentQuestion() - 1].answer === $('input:checked').val()) {
+        if (questionsList[counter.currentQuestion - 1].answer === $('input:checked').val()) {
             RESULT.text('Correct!');
             counter.addCorrect();
             IMAGE.attr('src', getRandomAsset(correctImg));
@@ -20,7 +20,7 @@
 
         }
         else {
-            RESULT.text(`Incorrect. The answer is ${questionsList[counter.currentQuestion() - 1].answer}`);
+            RESULT.text(`Incorrect. The answer is ${questionsList[counter.currentQuestion - 1].answer}`);
             IMAGE.attr('alt', 'sad vikings fan')
             IMAGE.attr('src', getRandomAsset(incorrectImg));
             SOUNDER.attr('src', getRandomAsset(incorrectSounder))
