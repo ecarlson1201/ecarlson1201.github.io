@@ -1,6 +1,7 @@
 body {
     background-image: url('../assets/images/minnesota-vikings-wallpapers-31229-5622710.jpg');
     font-family: 'ubuntu','Segoe UI', Tahoma, Verdana, sans-serif;
+
 }
 
 header {
@@ -12,6 +13,7 @@ header {
     text-shadow: 1px 2px black;
 }
 
+
 label{
     display: table-cell;
     width: 400px;
@@ -21,21 +23,78 @@ label{
     color: rgb(78, 42, 138);
     border-radius: 10px;
     vertical-align: middle;
+    margin-left: 5px;
 }
 
-label:focus{
-    color: rgb(241, 183, 45);
-    background-color: rgb(78, 42, 138);
+fieldset{
+    border: none;
+    font-size: 23px;
 }
 
-input {
+input{
     -webkit-appearance: none;
+    transition: 0.2s all linear;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    display: table-cell;
 }
 
-input:focus + label {
+input:checked {
+    width: 45px;
+    background-size: contain;
+    background-position: center center;
+    border: none;
+    transition-duration: 0.2s;
+}
+
+input:checked + label{
+    background-color: rgb(36, 13, 73);
     color: rgb(241, 183, 45);
-    background-color: rgb(25, 9, 51);
-    transition-duration: 0.3s;
+}
+
+#ans-a{
+    background: transparent url("../assets/images/a.png") no-repeat top;
+    width: 20px;
+    background-size: contain;
+    background-position: center center;
+}
+
+#ans-a:checked{
+    width: 50px;
+}
+
+#ans-b{
+    background: transparent url("../assets/images/b.png") no-repeat top;
+    width: 20px;
+    background-size: contain;
+    background-position: center center;
+}
+
+#ans-b:checked{
+    width: 50px;
+}
+
+#ans-c{
+    background: transparent url("../assets/images/c.png") no-repeat top;
+    width: 20px;
+    background-size: contain;
+    background-position: center center;
+}
+
+#ans-c:checked{
+    width: 50px;
+}
+
+#ans-d{
+    background: transparent url("../assets/images/d.png") no-repeat top;
+    width: 20px;
+    background-size: contain;
+    background-position: center center;
+}
+
+#ans-d:checked{
+    width: 50px;
 }
 
 button {
@@ -98,17 +157,12 @@ span{
     cursor: pointer;
 }
 
-.checked {
-    background-color: rgb(25, 9, 51);
-    color:rgb(241, 183, 45);
-}
-
-.checked:hover {
-    background-color: rgb(25, 9, 51);
-}
-
 .option {
     display: inline-block;
+    margin: 5px;
+    background-color: rgb(241, 183, 45);
+    border-radius: 15px;
+    padding: 4px;
 }
 
 .muteButton {
