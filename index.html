@@ -39,7 +39,7 @@
                     </div>
                     <br>
                     <button class="js-submit" type="submit">Submit</button>
-                    <audio id="sounder" autoplay></audio>
+                    <audio id="sounder" muted autoplay></audio>
             </form>
         </section>
 
@@ -47,16 +47,15 @@
             <img src="./assets/images/Vikings-Paul-Allen.jpg" id="image" alt="paul allen">
             <h2 class="js-result">"Hello football fans! I'm
                 <span>Paul Allen</span>, the voice of the
-                <span>Minnesota Vikings</span> and I'm here to test your knowledge of Vikings' history! I can get pretty loud,
-                so if you would like to unplug my mic, just click the
-                <span>MUTE</span> button in the corner! Let's go!"
+                <span>Minnesota Vikings</span> and I'm here to test your knowledge of Vikings' history! If you would
+                like to play with <span>SOUND</span> hit the button in the corner! Lets go!"
             </h2>
             <button class="js-next">Start Quiz</button>
             <button class="js-restart hidden">Restart Quiz</button>
             <br>
             <a class="js-vidLink vidLink hidden" target="_blank"></a>
         </section>
-        <button class="muteButton"></button>
+        <button class="muteButton muted"></button>
     </main>
 
     <footer role="contentinfo" class="hidden">2018 Eric Carlson</footer>
@@ -65,7 +64,7 @@
     <script src="./js/data.js"></script>
     <script src="./js/store.js"></script>
     <script src="./js/elements.js"></script>
-    <script src="./js/quizFunctions.js"></script>
+    <script src="./js/quizfunctions.js"></script>
     <script src="./js/clickHandlers.js"></script>
 </body>
 
