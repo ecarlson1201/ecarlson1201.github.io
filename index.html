@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <header class='header col-6'></header>
-    <main class="row">
+    <header role="banner" class='header col-6'></header>
+    <main role='main' class="row">
         <section class="js-quiz hidden col-6" >
             <form>
                     <h2 class="js-question question"></h2>
@@ -38,7 +38,7 @@
                         <label class="js-option" for="ans-d"></label>
                     </div>
                     <br>
-                    <button class="js-submit" type="submit">Submit</button>
+                    <button role="presentation" class="js-submit" type="submit">Submit</button>
                     <audio id="sounder" muted autoplay></audio>
             </form>
         </section>
@@ -50,15 +50,15 @@
                 <span>Minnesota Vikings</span> and I'm here to test your knowledge of Vikings' history! If you would
                 like to play with <span>SOUND</span> hit the button in the corner! Lets go!"
             </h2>
-            <button class="js-next">Start Quiz</button>
-            <button class="js-restart hidden">Restart Quiz</button>
+            <button role="presentation" class="js-next">Start Quiz</button>
+            <button role="presentation" class="js-restart hidden">Restart Quiz</button>
             <br>
             <a class="js-vidLink vidLink hidden" target="_blank"></a>
         </section>
-        <button class="muteButton muted"></button>
+        <button role="presentation" class="muteButton muted"></button>
     </main>
 
-    <footer class="hidden">2018 Eric Carlson</footer>
+    <footer role='contentinfo' class="hidden">2018 Eric Carlson</footer>
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="./js/data.js"></script>
